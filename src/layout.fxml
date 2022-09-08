@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CalculadoraController">
+   <children>
+      <Pane prefHeight="720.0" prefWidth="1280.0">
+         <children>
+            <AnchorPane prefHeight="720.0" prefWidth="1280.0">
+               <children>
+                  <Line endX="-404.0" endY="-50.0" layoutX="419.0" layoutY="157.0" startX="826.0" startY="-50.0" />
+                  <Label layoutX="46.0" layoutY="410.0" text="Tijolo">
+                     <font>
+                        <Font name="Symbol" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="46.0" layoutY="467.0" text="Argamassa">
+                     <font>
+                        <Font name="Symbol" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="46.0" layoutY="525.0" text="Pedreiro">
+                     <font>
+                        <Font name="Symbol" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="46.0" layoutY="583.0" text="Servente">
+                     <font>
+                        <Font name="Symbol" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="175.0" layoutY="362.0" text="Insumos">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="46.0" layoutY="200.0" text="Altura">
+                     <font>
+                        <Font name="Symbol" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="46.0" layoutY="257.0" text="Comprimento">
+                     <font>
+                        <Font name="Symbol" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="188.0" layoutY="151.0" text="Muro">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="453.0" layoutY="7.0" prefHeight="34.0" prefWidth="373.0">
+                     <children>
+                        <Label layoutX="103.0" layoutY="29.0" text="Calculadora de Muro">
+                           <font>
+                              <Font name="Symbol" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="92.0" fitWidth="146.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Ilustração-de-Tijolo-PNG.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Line endX="-78.0" endY="353.0" layoutX="717.0" layoutY="281.0" startX="-78.0" startY="-113.0" />
+                  <Label layoutX="929.0" layoutY="138.0" text="Relatório">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="714.0" layoutY="202.0" text="Quantidades/horas:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <GridPane layoutX="726.0" layoutY="241.0" prefHeight="166.0" prefWidth="227.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Tijolo">
+                           <font>
+                              <Font name="Symbol" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Argamassa" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Symbol" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Pedreiro" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Symbol" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Servente" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Symbol" size="14.0" />
+                           </font>
+                        </Label>
+                        <Text fx:id="relatorioTijolo" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="relatorioArgamassa" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="relatorioPedreiro" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="relatorioServente" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+                  <Label layoutX="714.0" layoutY="454.0" text="Valor Total: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="valorTotal" layoutX="826.0" layoutY="474.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="btnCalcular" layoutX="864.0" layoutY="612.0" mnemonicParsing="false" onAction="#CalcularMuro" prefHeight="46.0" prefWidth="178.0" text="Calcular" />
+                  <TextField fx:id="muroAltura" layoutX="134.0" layoutY="198.0" promptText="Em metros EX: 1.8" />
+                  <TextField fx:id="muroComprimento" layoutX="134.0" layoutY="255.0" promptText="Em metros EX: 7" />
+                  <TextField fx:id="isnumoTijolo" layoutX="134.0" layoutY="408.0" promptText="Valor Unitário Ex: 2.50" />
+                  <TextField fx:id="insumoArgamassa" layoutX="134.0" layoutY="464.0" promptText="Valor Unitário Ex: 3" />
+                  <TextField fx:id="insumoPedreiro" layoutX="134.0" layoutY="523.0" promptText="Valor hora Ex: 70" />
+                  <TextField fx:id="insumoServente" layoutX="134.0" layoutY="581.0" promptText="Valor hora Ex: 70" />
+                  <Text fx:id="errorText" layoutX="188.0" layoutY="665.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+   </children>
+</VBox>
