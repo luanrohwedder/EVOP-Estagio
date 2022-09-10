@@ -54,42 +54,42 @@
             <AnchorPane prefHeight="720.0" prefWidth="1280.0">
                <children>
                   <Line endX="-404.0" endY="-50.0" layoutX="419.0" layoutY="157.0" startX="826.0" startY="-50.0" />
-                  <Label layoutX="46.0" layoutY="410.0" text="Tijolo">
+                  <Label layoutX="46.0" layoutY="310.0" text="Tijolo">
                      <font>
                         <Font name="Symbol" size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="46.0" layoutY="467.0" text="Argamassa">
+                  <Label layoutX="46.0" layoutY="367.0" text="Argamassa">
                      <font>
                         <Font name="Symbol" size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="46.0" layoutY="525.0" text="Pedreiro">
+                  <Label layoutX="46.0" layoutY="445.0" text="Pedreiro">
                      <font>
                         <Font name="Symbol" size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="46.0" layoutY="583.0" text="Servente">
+                  <Label layoutX="46.0" layoutY="503.0" text="Servente">
                      <font>
                         <Font name="Symbol" size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="175.0" layoutY="362.0" text="Insumos">
+                  <Label layoutX="175.0" layoutY="262.0" text="Insumos">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="46.0" layoutY="200.0" text="Altura">
+                  <Label layoutX="46.0" layoutY="170.0" text="Altura">
                      <font>
                         <Font name="Symbol" size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="46.0" layoutY="257.0" text="Comprimento">
+                  <Label layoutX="46.0" layoutY="227.0" text="Comprimento">
                      <font>
                         <Font name="Symbol" size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="188.0" layoutY="151.0" text="Muro">
+                  <Label layoutX="188.0" layoutY="121.0" text="Muro">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -108,18 +108,18 @@
                         </ImageView>
                      </children>
                   </AnchorPane>
-                  <Line endX="-78.0" endY="353.0" layoutX="717.0" layoutY="281.0" startX="-78.0" startY="-113.0" />
-                  <Label layoutX="929.0" layoutY="138.0" text="Relatório">
+                  <Line endX="-78.0" endY="353.0" layoutX="487.0" layoutY="281.0" startX="-78.0" startY="-113.0" />
+                  <Label layoutX="753.0" layoutY="121.0" text="Relatório">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="714.0" layoutY="202.0" text="Quantidades/horas:">
+                  <Label layoutX="534.0" layoutY="206.0" text="Quantidades/horas:">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <GridPane layoutX="726.0" layoutY="241.0" prefHeight="166.0" prefWidth="227.0">
+                  <GridPane layoutX="546.0" layoutY="245.0" prefHeight="166.0" prefWidth="227.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -173,26 +173,57 @@
                         </Text>
                      </children>
                   </GridPane>
-                  <Label layoutX="714.0" layoutY="454.0" text="Valor Total: ">
+                  <Label layoutX="864.0" layoutY="258.0" text="Gasto Total">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Text fx:id="valorTotal" layoutX="826.0" layoutY="474.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                  <Text fx:id="gastoTotal" layoutX="991.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Text>
-                  <Button fx:id="btnCalcular" layoutX="864.0" layoutY="612.0" mnemonicParsing="false" onAction="#CalcularMuro" prefHeight="46.0" prefWidth="178.0" text="Calcular" />
-                  <TextField fx:id="muroAltura" layoutX="134.0" layoutY="198.0" promptText="Em metros EX: 1.8" />
-                  <TextField fx:id="muroComprimento" layoutX="134.0" layoutY="255.0" promptText="Em metros EX: 7" />
-                  <TextField fx:id="isnumoTijolo" layoutX="134.0" layoutY="408.0" promptText="Valor Unitário Ex: 2.50" />
-                  <TextField fx:id="insumoArgamassa" layoutX="134.0" layoutY="464.0" promptText="Valor Unitário Ex: 3" />
-                  <TextField fx:id="insumoPedreiro" layoutX="134.0" layoutY="523.0" promptText="Valor hora Ex: 70" />
-                  <TextField fx:id="insumoServente" layoutX="134.0" layoutY="581.0" promptText="Valor hora Ex: 70" />
+                  <Button fx:id="btnCalcular" layoutX="703.0" layoutY="612.0" mnemonicParsing="false" onAction="#CalcularMuro" prefHeight="46.0" prefWidth="178.0" text="Calcular" />
+                  <TextField fx:id="muroAltura" layoutX="134.0" layoutY="168.0" promptText="Em metros EX: 1.8" />
+                  <TextField fx:id="muroComprimento" layoutX="134.0" layoutY="225.0" promptText="Em metros EX: 7" />
+                  <TextField fx:id="isnumoTijolo" layoutX="134.0" layoutY="308.0" promptText="Valor Unitário Ex: 2.50" />
+                  <TextField fx:id="insumoArgamassa" layoutX="134.0" layoutY="364.0" promptText="Valor Unitário Ex: 3" />
+                  <TextField fx:id="insumoPedreiro" layoutX="134.0" layoutY="443.0" promptText="Valor hora Ex: 70" />
+                  <TextField fx:id="insumoServente" layoutX="134.0" layoutY="501.0" promptText="Valor hora Ex: 70" />
                   <Text fx:id="errorText" layoutX="188.0" layoutY="665.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER">
                      <font>
                         <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="133.0" layoutY="546.0" text="Margem de Lucro">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="margemLucro" layoutX="134.0" layoutY="592.0" promptText="Porcentagem EX: 30" />
+                  <Label layoutX="173.0" layoutY="406.0" text="Serviços">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="864.0" layoutY="298.0" text="Lucro">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="lucro" layoutX="991.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="864.0" layoutY="378.0" text="Valor Total">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="valorTotal" layoutX="991.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
                      </font>
                   </Text>
                </children>

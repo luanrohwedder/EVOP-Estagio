@@ -8,6 +8,14 @@ public class CalculadoraController {
     @FXML
     private Button btnCalcular;
     @FXML
+    private Text errorText;    
+    @FXML
+    private Text gastoTotal;
+    @FXML
+    private Text lucro;
+    @FXML
+    private Text valorTotal;   
+    @FXML
     private TextField insumoArgamassa;
     @FXML
     private TextField insumoPedreiro;
@@ -18,7 +26,11 @@ public class CalculadoraController {
     @FXML
     private TextField muroAltura;
     @FXML
+    private TextField muroAltura1;
+    @FXML
     private TextField muroComprimento;
+    @FXML
+    private TextField margemLucro;
     @FXML
     private Text relatorioArgamassa;
     @FXML
@@ -27,10 +39,6 @@ public class CalculadoraController {
     private Text relatorioServente;
     @FXML
     private Text relatorioTijolo;
-    @FXML
-    private Text valorTotal;
-    @FXML
-    private Text errorText;    
 
     private Double argamassa;
     private Double pedreiro;
@@ -38,7 +46,9 @@ public class CalculadoraController {
     private Double tijolo;
     private Double altura;
     private Double comprimento;
-    private Double total;
+    private Double margemDeLucro;
+    private Double gasto;
+    private Double lucros;
     /*
      * Métodos dos eventos do layout
     */
@@ -48,6 +58,8 @@ public class CalculadoraController {
         if(valid()) {
             errorText.setText("");
             
+            margemDeLucro = Double.parseDouble(margemLucro.getText());
+
             //Insumos        
             argamassa = Double.parseDouble(insumoArgamassa.getText()); 
             pedreiro = Double.parseDouble(insumoPedreiro.getText());  
@@ -60,15 +72,19 @@ public class CalculadoraController {
             
             Double tamanhoMuro = altura * comprimento;
             
-            //Resultado dos calculos            
-            total = calcularAlvenaria(tamanhoMuro, argamassa, pedreiro, servente, tijolo) + calcularEmboco(tamanhoMuro, argamassa, pedreiro, servente);
+            //Resultado dos gastos e lucro
+            gasto = calcularAlvenaria(tamanhoMuro, argamassa, pedreiro, servente, tijolo) + calcularEmboco(tamanhoMuro, argamassa, pedreiro, servente);
+            lucros = gasto * (margemDeLucro/100);
+            
 
             //Exibindo os resultados
             relatorioArgamassa.setText(String.format("%.0f ", 10 * tamanhoMuro + 40 * (tamanhoMuro * 2)));
             relatorioPedreiro.setText(String.format("%.0f horas", 0.8 * tamanhoMuro + 0.5 * (tamanhoMuro * 2)));
             relatorioServente.setText(String.format("%.0f horas", 0.8 * tamanhoMuro + 0.5 * (tamanhoMuro * 2)));
             relatorioTijolo.setText(String.format("%.0f", 21 * tamanhoMuro));
-            valorTotal.setText(String.format("R$ %.2f", total));                  
+            gastoTotal.setText(String.format("R$ %.2f", gasto));
+            lucro.setText(String.format("R$ %.2f", lucros));                 
+            valorTotal.setText(String.format("R$ %.2f", lucros + gasto));
         } else {            
             errorText.setText("Preencha os campos correntamente!");
         }
@@ -103,7 +119,7 @@ public class CalculadoraController {
     }
     
     boolean valid() {
-        if(validInput2(insumoArgamassa) && validInput2(insumoPedreiro) && validInput2(insumoServente) && validInput2(isnumoTijolo) && validInput2(muroAltura) && validInput2(muroComprimento)) {
+        if(validInput2(insumoArgamassa) && validInput2(insumoPedreiro) && validInput2(insumoServente) && validInput2(isnumoTijolo) && validInput2(muroAltura) && validInput2(muroComprimento) && validInput2(margemLucro)) {
             return true;
         }
 
