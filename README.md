@@ -9,4 +9,4 @@ Código fonte referente a atividade para o estágio.
 - `Scene Builder`
 
 ## Dependências
-- Um JRE ou JDK com javafx no runtime (para rodar o jar da aplicação)
+- Um JRE ou JDK com javaFX no runtime (para rodar o jar da aplicação)
